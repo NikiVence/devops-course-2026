@@ -1,0 +1,16 @@
+Фактический результат публикации (24.09.2026)
+
+$ git push -u origin main
+To https://github.com/NikiVence/devops-course-2026.git
+   6b63fed..2d10040  main -> main
+branch 'main' set up to track 'origin/main'.
+
+$ git push -u origin feature/hobby-project
+To https://github.com/NikiVence/devops-course-2026.git
+ * [new branch] feature/hobby-project -> feature/hobby-project
+branch 'feature/hobby-project' set up to track 'origin/feature/hobby-project'.
+
+Создан Pull Request: https://github.com/NikiVence/devops-course-2026/pull/1
+Ветки GitHub, подтверждённые API: feature/hobby-project, main.
+practice/rebase-playground оставлена локально согласно заданию.
+Парное review и merge пока не выполнены.

@@ -3,14 +3,12 @@
 ## Публикация и Pull Request
 
 Публичный репозиторий создан: https://github.com/NikiVence/devops-course-2026.
-В нём пока только исходный README. Учебные файлы и feature-ветка ещё не отправлены,
-Pull Request ещё не создан. Автоматическая проверка разрешений отклонила push
-и создание PR, поскольку они раскрывают ФИО, группу, учебную почту в коммитах
-и содержимое файлов в публичном репозитории. Нужно отдельное подтверждение пользователя.
-Готовый состав публикации: about_me.md, goals.md, ide_notes.md, svn_comparison.md,
+Учебные файлы и feature-ветка опубликованы с явного разрешения пользователя.
+Создан Pull Request: https://github.com/NikiVence/devops-course-2026/pull/1.
+Состав публикации: about_me.md, goals.md, ide_notes.md, svn_comparison.md,
 control_questions.md, README.md, отчёты и протоколы, hobby.md в feature-ветке.
 
-После разрешения публикуются только main и feature/hobby-project.
+На GitHub опубликованы только main и feature/hobby-project.
 Ветка practice/rebase-playground должна оставаться локальной.
 
 ## SSH
@@ -40,7 +38,7 @@ git remote set-url origin git@github.com:NikiVence/devops-course-2026.git
 
 ## Парное review и merge
 
-После создания PR другой студент или преподаватель должен оставить содержательный
+В созданном PR другой студент или преподаватель должен оставить содержательный
 комментарий. Ответное review выполняется в PR выбранного одногруппника.
 После исправления замечания отдельным коммитом и одобрения выполнить Squash and merge,
 удалить feature-ветку на GitHub и сохранить ссылку на объединённый PR со скриншотом
