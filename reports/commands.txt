@@ -1,0 +1,160 @@
+$ git status --short
+?? about_me.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git add -- about_me.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git commit -m Add about_me.md with student info
+[main 5a89cf5] Add about_me.md with student info
+ 1 file changed, 9 insertions(+)
+ create mode 100644 about_me.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git add -- goals.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git commit -m docs: add semester goals
+[main fcc4b62] docs: add semester goals
+ 1 file changed, 8 insertions(+)
+ create mode 100644 goals.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git add -- ide_notes.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git commit -m docs: add IDE vs CLI notes
+[main 70a3799] docs: add IDE vs CLI notes
+ 1 file changed, 21 insertions(+)
+ create mode 100644 ide_notes.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git add -- svn_comparison.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git commit -m docs: compare Git and SVN
+[main aaf7b43] docs: compare Git and SVN
+ 1 file changed, 26 insertions(+)
+ create mode 100644 svn_comparison.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git add -- README.md .gitignore .vscode/extensions.json control_questions.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git commit -m docs: add defense answers and course overview
+[main b94a6ba] docs: add defense answers and course overview
+ 4 files changed, 78 insertions(+), 2 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 .vscode/extensions.json
+ create mode 100644 control_questions.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git switch -c feature/hobby-project
+Switched to a new branch 'feature/hobby-project'
+
+$ git add -- hobby.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git commit -m feat: add hobby project description
+[feature/hobby-project 07db4a6] feat: add hobby project description
+ 1 file changed, 24 insertions(+)
+ create mode 100644 hobby.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git branch -a
+* feature/hobby-project
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+
+$ git log --oneline --all --graph
+* 07db4a6 feat: add hobby project description
+* b94a6ba docs: add defense answers and course overview
+* aaf7b43 docs: compare Git and SVN
+* 70a3799 docs: add IDE vs CLI notes
+* fcc4b62 docs: add semester goals
+* 5a89cf5 Add about_me.md with student info
+* 6b63fed Initial commit
+
+$ git switch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to branch 'main'
+
+$ git switch -c practice/rebase-playground
+Switched to a new branch 'practice/rebase-playground'
+
+$ git add -- notes/01-staging.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git commit -m docs: add staging practice notes
+[practice/rebase-playground 49f1bca] docs: add staging practice notes
+ 1 file changed, 3 insertions(+)
+ create mode 100644 notes/01-staging.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git add -- notes/02-branches.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git commit -m docs: add branches practice notes
+[practice/rebase-playground a8641f9] docs: add branches practice notes
+ 1 file changed, 3 insertions(+)
+ create mode 100644 notes/02-branches.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git add -- notes/03-integration.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git commit -m docs: add integration practice notes
+[practice/rebase-playground 43d7020] docs: add integration practice notes
+ 1 file changed, 3 insertions(+)
+ create mode 100644 notes/03-integration.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git log --oneline main..HEAD
+43d7020 docs: add integration practice notes
+a8641f9 docs: add branches practice notes
+49f1bca docs: add staging practice notes
+
+$ git rev-parse HEAD^{tree}
+a4b719f2ad650e2941aaacfb548bd665a065e1c0
+
+$ git rebase -i HEAD~3
+[detached HEAD b5b0b35] docs: add staging practice notes
+ Date: Thu Sep 24 09:20:35 2026 +0300
+ 2 files changed, 6 insertions(+)
+ create mode 100644 notes/01-staging.md
+ create mode 100644 notes/02-branches.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (2/3)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (3/3)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Successfully rebased and updated refs/heads/practice/rebase-playground.
+
+$ git log --oneline main..HEAD
+185c040 docs: add integration practice notes
+b5b0b35 docs: add staging practice notes
+
+$ git rev-list --count main..HEAD
+2
+
+$ git rev-parse HEAD^{tree}
+a4b719f2ad650e2941aaacfb548bd665a065e1c0
+
+$ git switch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to branch 'main'
+

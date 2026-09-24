@@ -1,0 +1,14 @@
+$ git branch -a
+* feature/hobby-project
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+
+$ git log --oneline --all --graph
+* 07db4a6 feat: add hobby project description
+* b94a6ba docs: add defense answers and course overview
+* aaf7b43 docs: compare Git and SVN
+* 70a3799 docs: add IDE vs CLI notes
+* fcc4b62 docs: add semester goals
+* 5a89cf5 Add about_me.md with student info
+* 6b63fed Initial commit
