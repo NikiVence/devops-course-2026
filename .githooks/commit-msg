@@ -1,0 +1,6 @@
+#!/bin/sh
+subject=$(head -n 1 "$1")
+if ! printf '%s\n' "$subject" | grep -Eq '^(feat|fix|docs|chore|refactor|merge|test|ci|build|perf|style|revert)(\([^)]+\))?!?: .+'; then
+    echo "ERROR: expected Conventional Commits: <type>: <description>" >&2
+    exit 1
+fi
