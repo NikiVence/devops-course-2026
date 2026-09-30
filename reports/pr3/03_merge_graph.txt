@@ -1,0 +1,11 @@
+$ git log --oneline --graph -8
+*   666febd merge: integrate feature A
+|\  
+| * 947df1b docs: add details for feature A
+| * b4f388b feat: add feature A description
+* | cb3870b docs: demonstrate parallel base development
+|/  
+* b7cd548 docs: record publication and pull request status
+* 2d10040 docs: add practice reports and verified command transcripts
+* b94a6ba docs: add defense answers and course overview
+* aaf7b43 docs: compare Git and SVN

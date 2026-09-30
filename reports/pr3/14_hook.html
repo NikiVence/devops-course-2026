@@ -1,0 +1,14 @@
+<!doctype html><html lang="ru"><meta charset="utf-8">
+<style>body{margin:0;background:#fff;font-family:Arial;color:#16283b}
+header{padding:18px 24px;background:#e7edf4;font-size:22px;font-weight:bold}
+small{display:block;padding:10px 24px;font-size:16px;color:#455468}
+pre{font:22px/1.3 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;
+padding:12px 24px;margin:0}</style><header>Проверка хука</header><small>Фактический журнал · pr3/14_hook.txt</small><pre>$ git commit -m &quot;bad message&quot;
+ERROR: expected Conventional Commits: &lt;type&gt;: &lt;description&gt;
+
+$ git commit -m &quot;chore: test git hook&quot;
+[main a6b1d12] chore: test git hook
+ 2 files changed, 7 insertions(+)
+ create mode 100755 .githooks/commit-msg
+ create mode 100644 test_hook.txt
+</pre></html>

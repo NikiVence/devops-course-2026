@@ -1,0 +1,5 @@
+$ git log --oneline origin/main -4
+7d43138 feat: add hobby project description (#1)
+5e315b8 Add goals.md with my 3 goals
+3afcc09 Add about_me.md with student info
+d431d8a Initial commit

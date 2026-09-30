@@ -1,0 +1,18 @@
+$ git remote -v
+mirror	https://github.com/NikiVence/devops-course-2026-mirror.git (fetch)
+mirror	https://github.com/NikiVence/devops-course-2026-mirror.git (push)
+origin	https://github.com/NikiVence/devops-course-2026.git (fetch)
+origin	https://github.com/NikiVence/devops-course-2026.git (push)
+origin	https://github.com/NikiVence/devops-course-2026-mirror.git (push)
+
+$ git log --oneline --graph -5
+*   c0d64a4 merge: preserve student PR1-2 and completed Git exercises
+|\  
+| * 7d43138 feat: add hobby project description (#1)
+| * 5e315b8 Add goals.md with my 3 goals
+| * 3afcc09 Add about_me.md with student info
+| * d431d8a Initial commit
+
+Проверка совпадения refs/heads/main:
+origin: c0d64a481bfbc4fc08c06ca2dcc8b9836e599d5a	refs/heads/main
+mirror: c0d64a481bfbc4fc08c06ca2dcc8b9836e599d5a	refs/heads/main

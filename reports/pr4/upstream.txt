@@ -1,0 +1,4 @@
+Source: https://gitverse.ru/dgimatdinov/devops-kr-template
+Default branch: master
+Original commit: 1341ed3bee42bc43a2f5bd0958b7da1aa8375cc3
+Instructor commit: 16f413cd6e1ef4ec9619a4f4301702d2b8741414

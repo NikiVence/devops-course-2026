@@ -1,0 +1,9 @@
+Auto-merging conflict_practice.md
+CONFLICT (add/add): Merge conflict in conflict_practice.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+<<<<<<< HEAD
+Выбор стратегии: rebase для личной ветки.
+=======
+Выбор стратегии: merge для общей истории.
+>>>>>>> prep/conflict-a

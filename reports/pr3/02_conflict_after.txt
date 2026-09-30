@@ -1,0 +1,22 @@
+# DevOps Course 2026
+
+Учебный репозиторий курса «Инструменты DevOps».
+
+## Студент
+Алиев Никита, группа ЭФБО-01-24.
+
+## Описание
+Практические работы для освоения инструментов DevOps.
+
+## Стек
+- Git / GitHub
+- Python
+- Docker (следующий блок)
+
+*   d273df6 merge: resolve conflict in README.md
+|\  
+| * 5d83454 docs: update README with student info (variant 2)
+* | 502794a docs: update README with student info (variant 1)
+|/  
+* b7cd548 docs: record publication and pull request status
+* 2d10040 docs: add practice reports and verified command transcripts

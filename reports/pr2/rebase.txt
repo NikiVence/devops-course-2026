@@ -1,0 +1,10 @@
+ДО: три коммита
+43d7020 docs: add integration practice notes
+a8641f9 docs: add branches practice notes
+49f1bca docs: add staging practice notes
+
+ПОСЛЕ git rebase -i HEAD~3: два коммита
+185c040 docs: add integration practice notes
+b5b0b35 docs: add staging practice notes
+
+Проверено: дерево файлов не изменилось. Ветка не публиковалась.

@@ -1,0 +1,8 @@
+{
+  "url": "https://github.com/NikiVence/devops-course-2026/pull/1",
+  "merged": true,
+  "merged_at": "2026-09-24T08:58:18Z",
+  "merge_commit_sha": "7d431389f1ab25593d709ab810c0eaaed300c7cf",
+  "reviews": [],
+  "comments": []
+}

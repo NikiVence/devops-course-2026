@@ -1,0 +1,16 @@
+$ git remote -v
+mirror	https://github.com/NikiVence/devops-kr-mirror.git (fetch)
+mirror	https://github.com/NikiVence/devops-kr-mirror.git (push)
+origin	https://github.com/NikiVence/devops-kr-template.git (fetch)
+origin	https://github.com/NikiVence/devops-kr-template.git (push)
+origin	https://github.com/NikiVence/devops-kr-mirror.git (push)
+upstream	https://gitverse.ru/dgimatdinov/devops-kr-template (fetch)
+upstream	https://gitverse.ru/dgimatdinov/devops-kr-template (push)
+
+$ git log --oneline --all --graph
+* 1341ed3 fix: fix validator
+| * 16f413c feat add validate_snils
+|/  
+* 5ed82d1 test: add tests
+* 501ef91 Create: new_file
+* b4d4305 Create: validator.py

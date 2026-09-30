@@ -1,0 +1,17 @@
+$ git log --oneline --graph -15
+*   c0d64a4 merge: preserve student PR1-2 and completed Git exercises
+|\  
+| * 7d43138 feat: add hobby project description (#1)
+| * 5e315b8 Add goals.md with my 3 goals
+| * 3afcc09 Add about_me.md with student info
+| * d431d8a Initial commit
+* 0746269 chore: test multi-remote push
+* a6b1d12 chore: test git hook
+* f9fa428 Revert "feat: add new feature (accidentally broken)"
+* 9d7982e feat: add new feature (accidentally broken)
+* 04a8bef fix: critical bug in calculator
+* 23aba4f docs: add calculator README
+* 153f8d6 feat: implement subtract function
+* 4acd630 feat: implement add function
+* b7cd548 docs: record publication and pull request status
+* 2d10040 docs: add practice reports and verified command transcripts

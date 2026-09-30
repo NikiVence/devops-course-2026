@@ -1,0 +1,690 @@
+$ git status --porcelain
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git status --porcelain
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse main
+b7cd548f67a743890a6015bb0e88a671cab29ed2
+
+$ git rev-parse origin/main
+b7cd548f67a743890a6015bb0e88a671cab29ed2
+
+$ git rev-parse main
+b7cd548f67a743890a6015bb0e88a671cab29ed2
+
+$ git tag evidence/pr3-start b7cd548f67a743890a6015bb0e88a671cab29ed2
+
+$ git switch -c conflict/readme-update-1
+Switched to a new branch 'conflict/readme-update-1'
+
+$ git add -- README.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m docs: update README with student info (variant 1)
+[conflict/readme-update-1 502794a] docs: update README with student info (variant 1)
+ 1 file changed, 7 insertions(+), 20 deletions(-)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+502794a7b385694175d3727f729a6751247c1ade
+
+$ git switch -c conflict/readme-update-2 b7cd548f67a743890a6015bb0e88a671cab29ed2
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to a new branch 'conflict/readme-update-2'
+
+$ git add -- README.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m docs: update README with student info (variant 2)
+[conflict/readme-update-2 5d83454] docs: update README with student info (variant 2)
+ 1 file changed, 8 insertions(+), 20 deletions(-)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+5d83454534e98ab8fa009c058035a8b7a9f54ac8
+
+$ git switch conflict/readme-update-1
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to branch 'conflict/readme-update-1'
+
+$ git merge conflict/readme-update-2
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git add -- README.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m merge: resolve conflict in README.md
+[conflict/readme-update-1 d273df6] merge: resolve conflict in README.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+d273df6ec27ccfb79df8ba9dea3f952610dcd6c3
+
+$ git tag evidence/pr3-readme-resolved
+
+$ git log --oneline --graph -5
+*   d273df6 merge: resolve conflict in README.md
+|\  
+| * 5d83454 docs: update README with student info (variant 2)
+* | 502794a docs: update README with student info (variant 1)
+|/  
+* b7cd548 docs: record publication and pull request status
+* 2d10040 docs: add practice reports and verified command transcripts
+
+$ git switch main
+Your branch is up to date with 'origin/main'.
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to branch 'main'
+
+$ git branch -D conflict/readme-update-1 conflict/readme-update-2
+Deleted branch conflict/readme-update-1 (was d273df6).
+Deleted branch conflict/readme-update-2 (was 5d83454).
+
+$ git switch -c demo/merge-example
+Switched to a new branch 'demo/merge-example'
+
+$ git add -- feature_a.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'feature_a.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m feat: add feature A description
+[demo/merge-example b4f388b] feat: add feature A description
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature_a.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+b4f388b08fa7b423864ba25fafbe7594d7c2639a
+
+$ git add -- feature_a.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'feature_a.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m docs: add details for feature A
+[demo/merge-example 947df1b] docs: add details for feature A
+ 1 file changed, 3 insertions(+)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+947df1be7f4553d8d70c4f04434c522b390786a2
+
+$ git switch -c demo/base-progress b7cd548f67a743890a6015bb0e88a671cab29ed2
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to a new branch 'demo/base-progress'
+
+$ git add -- base_progress.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'base_progress.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m docs: demonstrate parallel base development
+[demo/base-progress cb3870b] docs: demonstrate parallel base development
+ 1 file changed, 2 insertions(+)
+ create mode 100644 base_progress.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+cb3870b697bdc931653cfc9a59b1e66bab385507
+
+$ git switch -c demo/merge-result
+Switched to a new branch 'demo/merge-result'
+
+$ git merge --no-ff demo/merge-example -m merge: integrate feature A
+Merge made by the 'ort' strategy.
+ feature_a.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 feature_a.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git tag evidence/pr3-merge
+
+$ git log --oneline --graph -8
+*   666febd merge: integrate feature A
+|\  
+| * 947df1b docs: add details for feature A
+| * b4f388b feat: add feature A description
+* | cb3870b docs: demonstrate parallel base development
+|/  
+* b7cd548 docs: record publication and pull request status
+* 2d10040 docs: add practice reports and verified command transcripts
+* b94a6ba docs: add defense answers and course overview
+* aaf7b43 docs: compare Git and SVN
+
+$ git switch -c demo/rebase-result demo/merge-example
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to a new branch 'demo/rebase-result'
+
+$ git rebase demo/base-progress
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (1/2)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (2/2)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Successfully rebased and updated refs/heads/demo/rebase-result.
+
+$ git switch demo/base-progress
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to branch 'demo/base-progress'
+
+$ git merge --ff-only demo/rebase-result
+Updating cb3870b..cba0e59
+Fast-forward
+ feature_a.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 feature_a.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git tag evidence/pr3-rebase
+
+$ git log --oneline --graph -8
+* cba0e59 docs: add details for feature A
+* 32c2ee9 feat: add feature A description
+* cb3870b docs: demonstrate parallel base development
+* b7cd548 docs: record publication and pull request status
+* 2d10040 docs: add practice reports and verified command transcripts
+* b94a6ba docs: add defense answers and course overview
+* aaf7b43 docs: compare Git and SVN
+* 70a3799 docs: add IDE vs CLI notes
+
+$ git rev-parse evidence/pr3-merge^{tree}
+86071792b599a9bf4a80fa34223bde8ca99b3fcd
+
+$ git rev-parse evidence/pr3-rebase^{tree}
+86071792b599a9bf4a80fa34223bde8ca99b3fcd
+
+$ git switch main
+Your branch is up to date with 'origin/main'.
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to branch 'main'
+
+$ git branch -D demo/merge-example demo/base-progress demo/merge-result demo/rebase-result
+Deleted branch demo/merge-example (was 947df1b).
+Deleted branch demo/base-progress (was cba0e59).
+Deleted branch demo/merge-result (was 666febd).
+Deleted branch demo/rebase-result (was cba0e59).
+
+$ git switch -c feature/calculator
+Switched to a new branch 'feature/calculator'
+
+$ git add -- calculator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'calculator.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m start calculator
+[feature/calculator f1f73e1] start calculator
+ 1 file changed, 3 insertions(+)
+ create mode 100644 calculator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+f1f73e199046313b577281234b1b0b0352c1ca5d
+
+$ git add -- calculator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'calculator.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m wip
+[feature/calculator b5ef47a] wip
+ 1 file changed, 1 insertion(+)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+b5ef47a920e6cad24b4996ce048aa9c7347fb3c9
+
+$ git add -- calculator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'calculator.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m add subtract
+[feature/calculator 3c6cb9a] add subtract
+ 1 file changed, 3 insertions(+)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+3c6cb9ae43bc71e6a81458ab60c5987e091dd542
+
+$ git add -- calculator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'calculator.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m fix typo in subtract
+[feature/calculator d2e9511] fix typo in subtract
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+d2e9511563a4578b4a4e7aadf5e6d41310c97ccb
+
+$ git add -- README_CALC.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'README_CALC.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m add docs
+[feature/calculator 325b525] add docs
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README_CALC.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+325b52596fa88516751f3778966d9452d2f0d703
+
+$ git add -- calculator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'calculator.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m oops
+[feature/calculator 5ca6442] oops
+ 1 file changed, 1 insertion(+)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+5ca6442c7fd108b98ba1c96a4616df81611f9c06
+
+$ git log --oneline -6
+5ca6442 oops
+325b525 add docs
+d2e9511 fix typo in subtract
+3c6cb9a add subtract
+b5ef47a wip
+f1f73e1 start calculator
+
+$ git tag evidence/pr3-calculator-dirty
+
+$ git rebase -i HEAD~6
+[detached HEAD 4525613] feat: implement add function
+ Date: Thu Sep 24 11:02:25 2026 +0300
+ 1 file changed, 3 insertions(+)
+ create mode 100644 calculator.py
+[detached HEAD a80fec3] feat: implement subtract function
+ Date: Thu Sep 24 11:02:26 2026 +0300
+ 1 file changed, 3 insertions(+)
+[detached HEAD 23aba4f] docs: add calculator README
+ Date: Thu Sep 24 11:02:27 2026 +0300
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README_CALC.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (1/6)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (2/6)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (3/6)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (4/6)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (5/6)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (6/6)
+Successfully rebased and updated refs/heads/feature/calculator.
+
+$ git rev-list --count b7cd548f67a743890a6015bb0e88a671cab29ed2..HEAD
+3
+
+$ git tag evidence/pr3-calculator-clean
+
+$ git log --oneline -3
+23aba4f docs: add calculator README
+153f8d6 feat: implement subtract function
+4acd630 feat: implement add function
+
+$ git switch main
+Your branch is up to date with 'origin/main'.
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to branch 'main'
+
+$ git merge --ff-only feature/calculator
+Updating b7cd548..23aba4f
+Fast-forward
+ README_CALC.md | 2 ++
+ calculator.py  | 7 +++++++
+ 2 files changed, 9 insertions(+)
+ create mode 100644 README_CALC.md
+ create mode 100644 calculator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git switch -c hotfix/urgent-fix
+Switched to a new branch 'hotfix/urgent-fix'
+
+$ git add -- calculator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'calculator.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m fix: critical bug in calculator
+[hotfix/urgent-fix 35c80fc] fix: critical bug in calculator
+ 1 file changed, 2 insertions(+)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+35c80fcfe963f2a84d93fd9d1d50fac9ae38f575
+
+$ git add -- calculator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'calculator.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m feat: add multiply and divide (experimental)
+[hotfix/urgent-fix 03a2567] feat: add multiply and divide (experimental)
+ 1 file changed, 8 insertions(+)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+03a2567f5709ab36eb53bdba727cf35808d49b18
+
+$ git switch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to branch 'main'
+
+$ git cherry-pick -x 35c80fcfe963f2a84d93fd9d1d50fac9ae38f575
+[main 04a8bef] fix: critical bug in calculator
+ Date: Thu Sep 24 11:02:32 2026 +0300
+ 1 file changed, 2 insertions(+)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git log --oneline -3
+04a8bef fix: critical bug in calculator
+23aba4f docs: add calculator README
+153f8d6 feat: implement subtract function
+
+$ git switch -c temp/lost-branch
+Switched to a new branch 'temp/lost-branch'
+
+$ git add -- important_data.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'important_data.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m feat: add very important data
+[temp/lost-branch 690a489] feat: add very important data
+ 1 file changed, 1 insertion(+)
+ create mode 100644 important_data.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+690a489c4ca073d4c9b89b9326492ff067ac0527
+
+$ git switch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to branch 'main'
+
+$ git branch -D temp/lost-branch
+Deleted branch temp/lost-branch (was 690a489).
+
+$ git reflog -15
+04a8bef HEAD@{0}: checkout: moving from temp/lost-branch to main
+690a489 HEAD@{1}: commit: feat: add very important data
+04a8bef HEAD@{2}: checkout: moving from main to temp/lost-branch
+04a8bef HEAD@{3}: cherry-pick: fix: critical bug in calculator
+23aba4f HEAD@{4}: checkout: moving from hotfix/urgent-fix to main
+03a2567 HEAD@{5}: commit: feat: add multiply and divide (experimental)
+35c80fc HEAD@{6}: commit: fix: critical bug in calculator
+23aba4f HEAD@{7}: checkout: moving from main to hotfix/urgent-fix
+23aba4f HEAD@{8}: merge feature/calculator: Fast-forward
+b7cd548 HEAD@{9}: checkout: moving from feature/calculator to main
+23aba4f HEAD@{10}: rebase (finish): returning to refs/heads/feature/calculator
+23aba4f HEAD@{11}: rebase (reword): docs: add calculator README
+d3eb699 HEAD@{12}: rebase (reword): add docs
+153f8d6 HEAD@{13}: rebase (fixup): feat: implement subtract function
+a80fec3 HEAD@{14}: rebase (reword): feat: implement subtract function
+
+$ git switch -c temp/recovered-branch 690a489c4ca073d4c9b89b9326492ff067ac0527
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to a new branch 'temp/recovered-branch'
+
+$ git tag evidence/pr3-recovered 690a489c4ca073d4c9b89b9326492ff067ac0527
+
+$ git switch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to branch 'main'
+
+$ git branch -D temp/recovered-branch
+Deleted branch temp/recovered-branch (was 690a489).
+
+$ git add -- calculator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'calculator.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m feat: add new feature (accidentally broken)
+[main 9d7982e] feat: add new feature (accidentally broken)
+ 1 file changed, 2 insertions(+)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+9d7982ebfe18b254c0bda16699e833dd147eb204
+
+$ git revert --no-edit HEAD
+[main f9fa428] Revert "feat: add new feature (accidentally broken)"
+ Date: Thu Sep 24 11:02:35 2026 +0300
+ 1 file changed, 2 deletions(-)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git log --oneline -3
+f9fa428 Revert "feat: add new feature (accidentally broken)"
+9d7982e feat: add new feature (accidentally broken)
+04a8bef fix: critical bug in calculator
+
+$ git rev-parse main
+f9fa42884ba3b7d37271cc27df8a408ad3dec500
+
+$ git switch -c prep/kr-practice
+Switched to a new branch 'prep/kr-practice'
+
+$ git add -- kr_prep.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'kr_prep.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m start notes
+[prep/kr-practice 47de461] start notes
+ 1 file changed, 4 insertions(+)
+ create mode 100644 kr_prep.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+47de4610f81d9ca0c0edce7effc5b396bf2d3660
+
+$ git add -- kr_prep.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'kr_prep.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m wip
+[prep/kr-practice b85053f] wip
+ 1 file changed, 3 insertions(+)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+b85053f464bcf9294f901d94ed8c2d77432efc0e
+
+$ git add -- kr_prep.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'kr_prep.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m oops notes
+[prep/kr-practice bd547f8] oops notes
+ 1 file changed, 3 insertions(+)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+bd547f882241f1a6bfa676592a453d360d822afc
+
+$ git log --oneline -3
+bd547f8 oops notes
+b85053f wip
+47de461 start notes
+
+$ git rebase -i HEAD~3
+[detached HEAD 2d1241b] docs: prepare answers for Git control work
+ Date: Thu Sep 24 11:02:36 2026 +0300
+ 1 file changed, 4 insertions(+)
+ create mode 100644 kr_prep.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (1/3)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (2/3)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (3/3)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Successfully rebased and updated refs/heads/prep/kr-practice.
+
+$ git rev-list --count f9fa42884ba3b7d37271cc27df8a408ad3dec500..HEAD
+1
+
+$ git log --oneline -1
+2f2590b docs: prepare answers for Git control work
+
+$ git switch main
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to branch 'main'
+
+$ git switch -c prep/conflict-a
+Switched to a new branch 'prep/conflict-a'
+
+$ git add -- conflict_practice.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'conflict_practice.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m docs: practice merge strategy
+[prep/conflict-a 61fa527] docs: practice merge strategy
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflict_practice.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+61fa527d9743c89e7be7df3808102ca1c45237d3
+
+$ git switch -c prep/conflict-b main
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to a new branch 'prep/conflict-b'
+
+$ git add -- conflict_practice.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'conflict_practice.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m docs: practice rebase strategy
+[prep/conflict-b 8edec9b] docs: practice rebase strategy
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflict_practice.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+8edec9bf03bb4faca5036a8c5e1bdbca02cb2a1d
+
+$ git merge prep/conflict-a
+Auto-merging conflict_practice.md
+CONFLICT (add/add): Merge conflict in conflict_practice.md
+Automatic merge failed; fix conflicts and then commit the result.
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git add -- conflict_practice.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'conflict_practice.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m merge: combine strategy notes
+[prep/conflict-b c5dca9f] merge: combine strategy notes
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+c5dca9fa4c71f67807fec714465d2b54d870bc2b
+
+$ git tag evidence/pr3-homework-conflict
+
+$ git switch main
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to branch 'main'
+
+$ git branch -D prep/conflict-a prep/conflict-b
+Deleted branch prep/conflict-a (was 61fa527).
+Deleted branch prep/conflict-b (was c5dca9f).
+
+$ git config core.hooksPath .githooks
+
+$ git add .githooks/commit-msg test_hook.txt
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of '.githooks/commit-msg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'test_hook.txt', LF will be replaced by CRLF the next time Git touches it
+
+$ git update-index --chmod=+x .githooks/commit-msg
+
+$ git commit -m bad message
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+ERROR: expected Conventional Commits: <type>: <description>
+
+$ git commit -m chore: test git hook
+[main a6b1d12] chore: test git hook
+ 2 files changed, 7 insertions(+)
+ create mode 100755 .githooks/commit-msg
+ create mode 100644 test_hook.txt
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git add -- README.md
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m chore: test multi-remote push
+[main 0746269] chore: test multi-remote push
+ 1 file changed, 9 insertions(+)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+07462695a8a874321e73238b4eb6ec32c12be8c0
+

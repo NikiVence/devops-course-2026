@@ -1,0 +1,3 @@
+$ git remote -v
+origin	https://github.com/NikiVence/devops-course-2026.git (fetch)
+origin	https://github.com/NikiVence/devops-course-2026.git (push)

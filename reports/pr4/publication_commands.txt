@@ -1,0 +1,180 @@
+$ git remote
+origin
+
+$ git remote add mirror https://github.com/NikiVence/devops-course-2026-mirror.git
+
+$ git config --replace-all remote.origin.pushurl https://github.com/NikiVence/devops-course-2026.git
+
+$ git config --add remote.origin.pushurl https://github.com/NikiVence/devops-course-2026-mirror.git
+
+$ git push origin main
+To https://github.com/NikiVence/devops-course-2026.git
+   7d43138..c0d64a4  main -> main
+To https://github.com/NikiVence/devops-course-2026-mirror.git
+ * [new branch]      main -> main
+
+$ git push origin feature/calculator
+remote: 
+remote: Create a pull request for 'feature/calculator' on GitHub by visiting:        
+remote:      https://github.com/NikiVence/devops-course-2026/pull/new/feature/calculator        
+remote: 
+To https://github.com/NikiVence/devops-course-2026.git
+ * [new branch]      feature/calculator -> feature/calculator
+remote: 
+remote: Create a pull request for 'feature/calculator' on GitHub by visiting:        
+remote:      https://github.com/NikiVence/devops-course-2026-mirror/pull/new/feature/calculator        
+remote: 
+To https://github.com/NikiVence/devops-course-2026-mirror.git
+ * [new branch]      feature/calculator -> feature/calculator
+
+$ git push origin hotfix/urgent-fix
+remote: 
+remote: Create a pull request for 'hotfix/urgent-fix' on GitHub by visiting:        
+remote:      https://github.com/NikiVence/devops-course-2026/pull/new/hotfix/urgent-fix        
+remote: 
+To https://github.com/NikiVence/devops-course-2026.git
+ * [new branch]      hotfix/urgent-fix -> hotfix/urgent-fix
+remote: 
+remote: Create a pull request for 'hotfix/urgent-fix' on GitHub by visiting:        
+remote:      https://github.com/NikiVence/devops-course-2026-mirror/pull/new/hotfix/urgent-fix        
+remote: 
+To https://github.com/NikiVence/devops-course-2026-mirror.git
+ * [new branch]      hotfix/urgent-fix -> hotfix/urgent-fix
+
+$ git push origin prep/kr-practice
+remote: 
+remote: Create a pull request for 'prep/kr-practice' on GitHub by visiting:        
+remote:      https://github.com/NikiVence/devops-course-2026/pull/new/prep/kr-practice        
+remote: 
+To https://github.com/NikiVence/devops-course-2026.git
+ * [new branch]      prep/kr-practice -> prep/kr-practice
+remote: 
+remote: Create a pull request for 'prep/kr-practice' on GitHub by visiting:        
+remote:      https://github.com/NikiVence/devops-course-2026-mirror/pull/new/prep/kr-practice        
+remote: 
+To https://github.com/NikiVence/devops-course-2026-mirror.git
+ * [new branch]      prep/kr-practice -> prep/kr-practice
+
+$ git push origin main
+To https://github.com/NikiVence/devops-kr-template.git
+ * [new branch]      main -> main
+To https://github.com/NikiVence/devops-kr-mirror.git
+ * [new branch]      main -> main
+
+$ git push origin --tags
+To https://github.com/NikiVence/devops-course-2026.git
+ * [new tag]         evidence/pr3-calculator-clean -> evidence/pr3-calculator-clean
+ * [new tag]         evidence/pr3-calculator-dirty -> evidence/pr3-calculator-dirty
+ * [new tag]         evidence/pr3-homework-conflict -> evidence/pr3-homework-conflict
+ * [new tag]         evidence/pr3-merge -> evidence/pr3-merge
+ * [new tag]         evidence/pr3-readme-resolved -> evidence/pr3-readme-resolved
+ * [new tag]         evidence/pr3-rebase -> evidence/pr3-rebase
+ * [new tag]         evidence/pr3-recovered -> evidence/pr3-recovered
+ * [new tag]         evidence/pr3-start -> evidence/pr3-start
+To https://github.com/NikiVence/devops-course-2026-mirror.git
+ * [new tag]         evidence/pr3-calculator-clean -> evidence/pr3-calculator-clean
+ * [new tag]         evidence/pr3-calculator-dirty -> evidence/pr3-calculator-dirty
+ * [new tag]         evidence/pr3-homework-conflict -> evidence/pr3-homework-conflict
+ * [new tag]         evidence/pr3-merge -> evidence/pr3-merge
+ * [new tag]         evidence/pr3-readme-resolved -> evidence/pr3-readme-resolved
+ * [new tag]         evidence/pr3-rebase -> evidence/pr3-rebase
+ * [new tag]         evidence/pr3-recovered -> evidence/pr3-recovered
+ * [new tag]         evidence/pr3-start -> evidence/pr3-start
+
+$ git push origin feature/add-phone-validation
+remote: 
+remote: Create a pull request for 'feature/add-phone-validation' on GitHub by visiting:        
+remote:      https://github.com/NikiVence/devops-kr-template/pull/new/feature/add-phone-validation        
+remote: 
+To https://github.com/NikiVence/devops-kr-template.git
+ * [new branch]      feature/add-phone-validation -> feature/add-phone-validation
+remote: 
+remote: Create a pull request for 'feature/add-phone-validation' on GitHub by visiting:        
+remote:      https://github.com/NikiVence/devops-kr-mirror/pull/new/feature/add-phone-validation        
+remote: 
+To https://github.com/NikiVence/devops-kr-mirror.git
+ * [new branch]      feature/add-phone-validation -> feature/add-phone-validation
+
+$ git ls-remote https://github.com/NikiVence/devops-course-2026.git refs/heads/main
+c0d64a481bfbc4fc08c06ca2dcc8b9836e599d5a	refs/heads/main
+
+$ git ls-remote https://github.com/NikiVence/devops-course-2026-mirror.git refs/heads/main
+c0d64a481bfbc4fc08c06ca2dcc8b9836e599d5a	refs/heads/main
+
+$ git push origin --tags
+To https://github.com/NikiVence/devops-kr-template.git
+ * [new tag]         evidence/kr-clean -> evidence/kr-clean
+ * [new tag]         evidence/kr-dirty -> evidence/kr-dirty
+ * [new tag]         evidence/kr-original -> evidence/kr-original
+To https://github.com/NikiVence/devops-kr-mirror.git
+ * [new tag]         evidence/kr-clean -> evidence/kr-clean
+ * [new tag]         evidence/kr-dirty -> evidence/kr-dirty
+ * [new tag]         evidence/kr-original -> evidence/kr-original
+
+$ git rev-parse feature/add-phone-validation
+4682da882c06889d2a65f9b240b37881cf24d62b
+
+$ git fetch origin
+fatal: unable to access 'https://github.com/NikiVence/devops-kr-template.git/': Failed to connect to github.com port 443 after 21140 ms: Could not connect to server
+
+$ git fetch origin
+From https://github.com/NikiVence/devops-kr-template
+   1341ed3..f2daacb  main       -> origin/main
+
+$ git switch main
+Your branch is up to date with 'upstream/master'.
+Switched to branch 'main'
+
+$ git merge --ff-only origin/main
+Updating 1341ed3..f2daacb
+Fast-forward
+ .gitignore                         |   4 +
+ README.md                          |  44 +++++++
+ pyproject.toml                     |   3 +
+ reports/pr4/01_remotes.txt         |  16 +++
+ reports/pr4/02_dirty_history.txt   |   5 +
+ reports/pr4/03_clean_history.txt   |  21 ++++
+ reports/pr4/04_conflict_before.txt |  64 ++++++++++
+ reports/pr4/05_conflict_after.txt  |  50 ++++++++
+ reports/pr4/06_tests.txt           |  25 ++++
+ reports/pr4/commands.txt           | 247 +++++++++++++++++++++++++++++++++++++
+ reports/pr4/current_history.txt    |  11 ++
+ reports/pr4/current_remotes.txt    |   8 ++
+ reports/pr4/upstream.txt           |   4 +
+ requirements-dev.txt               |   1 +
+ test/test_validator.py             |   4 -
+ tests/test_instructor_snils.py     |  15 +++
+ tests/test_snils.py                |   9 ++
+ tests/test_validator.py            |  21 ++++
+ validator.py                       |  57 +++++++--
+ 19 files changed, 598 insertions(+), 11 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 pyproject.toml
+ create mode 100644 reports/pr4/01_remotes.txt
+ create mode 100644 reports/pr4/02_dirty_history.txt
+ create mode 100644 reports/pr4/03_clean_history.txt
+ create mode 100644 reports/pr4/04_conflict_before.txt
+ create mode 100644 reports/pr4/05_conflict_after.txt
+ create mode 100644 reports/pr4/06_tests.txt
+ create mode 100644 reports/pr4/commands.txt
+ create mode 100644 reports/pr4/current_history.txt
+ create mode 100644 reports/pr4/current_remotes.txt
+ create mode 100644 reports/pr4/upstream.txt
+ create mode 100644 requirements-dev.txt
+ delete mode 100644 test/test_validator.py
+ create mode 100644 tests/test_instructor_snils.py
+ create mode 100644 tests/test_snils.py
+ create mode 100644 tests/test_validator.py
+
+$ git push origin main
+Everything up-to-date
+To https://github.com/NikiVence/devops-kr-mirror.git
+   1341ed3..f2daacb  main -> main
+
+$ git ls-remote https://github.com/NikiVence/devops-kr-template.git refs/heads/main
+f2daacb0fb1970f093c42a7475319c44509b82d2	refs/heads/main
+
+$ git ls-remote https://github.com/NikiVence/devops-kr-mirror.git refs/heads/main
+f2daacb0fb1970f093c42a7475319c44509b82d2	refs/heads/main
+

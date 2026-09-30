@@ -1,55 +1,38 @@
-# Что осталось до полной сдачи
+# Итоговый статус работ — 30.09.2026
 
-## Публикация и Pull Request
+## Подготовлено
 
-Публичный репозиторий создан: https://github.com/NikiVence/devops-course-2026.
-Учебные файлы и feature-ветка опубликованы с явного разрешения пользователя.
-Создан Pull Request: https://github.com/NikiVence/devops-course-2026/pull/1.
-Состав публикации: about_me.md, goals.md, ide_notes.md, svn_comparison.md,
-control_questions.md, README.md, отчёты и протоколы, hobby.md в feature-ветке.
+- ПР1–2: отчёты обновлены по фактическим файлам пользователя и GitHub.
+- ПР3: реальные конфликты, merge/rebase, reword/fixup/drop, cherry-pick,
+  reflog, revert, commit-msg hook, домашняя подготовка и два remote.
+- ПР4: валидатор, 15 тестов, очищенная история, разрешённый конфликт,
+  объединённый PR, удалённая feature-ветка и синхронизированное зеркало.
+- Для каждой работы подготовлены Word, PDF и материалы к защите.
 
-На GitHub опубликованы только main и feature/hobby-project.
-Ветка practice/rebase-playground должна оставаться локальной.
+## Ссылки
 
-## SSH
+- Курс: https://github.com/NikiVence/devops-course-2026
+- Зеркало курса: https://github.com/NikiVence/devops-course-2026-mirror
+- PR ПР2: https://github.com/NikiVence/devops-course-2026/pull/1 (merged)
+- Контрольная: https://github.com/NikiVence/devops-kr-template
+- Зеркало контрольной: https://github.com/NikiVence/devops-kr-mirror
+- PR ПР4: https://github.com/NikiVence/devops-kr-template/pull/1 (merged, squash)
 
-Отдельная пара Ed25519 создана вне репозитория в профиле пользователя:
-`C:\Users\Администратор\.ssh\id_ed25519_devops_2026`.
-Добавление публичного ключа через API не удалось (HTTP 404); SSH-аутентификация
-не подтверждена. Существующая авторизация HTTPS работает.
+## Что нельзя подтвердить вместо студента
 
-Открыть https://github.com/settings/ssh/new и добавить содержимое публичного файла:
+1. SSH в ПР1: проверка текущим учебным ключом возвращает Permission denied
+   (publickey). HTTPS работает. Добавление публичного ключа в настройках
+   аккаунта и успешное ssh -T ещё требуются для буквального выполнения SSH-части.
+2. Парное review ПР2: GitHub подтвердил merge, но API не содержит отзывов
+   и комментариев другого участника. Снимок работы в Source Control также
+   должен быть сделан при реальной демонстрации IDE.
+3. Ветка practice/rebase-playground уже присутствовала на сервере до этой
+   доработки, хотя методичка предписывала оставить её локальной. Она не удалялась.
+4. В ПР4 зеркало размещено на GitHub, а в вариантах задания указаны GitLab
+   или Gitverse. Если преподаватель требует именно отдельный сервис,
+   понадобится адрес зеркала в аккаунте студента на выбранной площадке.
+5. VirtualBox, настройка BIOS и полноценная Ubuntu VM относятся к подготовке
+   следующего блока и не устанавливались. Старая загрузка ISO в .tmp неполная.
 
-```powershell
-Get-Content "$env:USERPROFILE\.ssh\id_ed25519_devops_2026.pub"
-```
-
-Затем проверить подключение и настроить репозиторий:
-
-```powershell
-ssh -i "$env:USERPROFILE\.ssh\id_ed25519_devops_2026" -o IdentitiesOnly=yes -T git@github.com
-git config core.sshCommand 'ssh -i C:/Users/Администратор/.ssh/id_ed25519_devops_2026 -o IdentitiesOnly=yes'
-git remote set-url origin git@github.com:NikiVence/devops-course-2026.git
-```
-
-Приватный файл без расширения .pub не публиковать. Для буквального выполнения
-шага clone по SSH после его настройки можно клонировать репозиторий ещё раз
-в отдельную папку; выполненное сейчас клонирование использовало HTTPS.
-
-## Парное review и merge
-
-В созданном PR другой студент или преподаватель должен оставить содержательный
-комментарий. Ответное review выполняется в PR выбранного одногруппника.
-После исправления замечания отдельным коммитом и одобрения выполнить Squash and merge,
-удалить feature-ветку на GitHub и сохранить ссылку на объединённый PR со скриншотом
-настоящего комментария. Чужое участие не имитировалось.
-
-## Интерфейс VS Code и скриншоты
-
-GitLens 19.2.0 установлен. Открыть учебный репозиторий в VS Code.
-В feature/hobby-project выполнить git branch и git log --oneline --all --graph
-и сделать настоящий скриншот терминала. Текст вывода уже сохранён в branches.txt.
-Открыть Source Control (Ctrl+Shift+G), внести небольшое осмысленное изменение
-в hobby.md, открыть diff, сделать скриншот и коммит кнопкой ✓.
-Это действие интерфейса пока не выполнено. ide_notes.md уже закоммичен через CLI.
-Протоколы не выдаются за скриншоты интерфейса.
+Иллюстрации журналов получены снимками локальных страниц с фактическим
+текстовым выводом; отдельно приложены настоящие снимки страниц GitHub.

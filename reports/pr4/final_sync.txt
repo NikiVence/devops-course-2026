@@ -1,0 +1,21 @@
+$ git remote -v
+mirror	https://github.com/NikiVence/devops-kr-mirror.git (fetch)
+mirror	https://github.com/NikiVence/devops-kr-mirror.git (push)
+origin	https://github.com/NikiVence/devops-kr-template.git (fetch)
+origin	https://github.com/NikiVence/devops-kr-template.git (push)
+origin	https://github.com/NikiVence/devops-kr-mirror.git (push)
+upstream	https://gitverse.ru/dgimatdinov/devops-kr-template (fetch)
+upstream	https://gitverse.ru/dgimatdinov/devops-kr-template (push)
+
+$ git log --oneline --graph -5
+* f2daacb feat: add phone validation and preserve instructor changes
+* 1341ed3 fix: fix validator
+* 5ed82d1 test: add tests
+* 501ef91 Create: new_file
+* b4d4305 Create: validator.py
+
+Проверка совпадения refs/heads/main:
+origin: f2daacb0fb1970f093c42a7475319c44509b82d2	refs/heads/main
+mirror: f2daacb0fb1970f093c42a7475319c44509b82d2	refs/heads/main
+PR: https://github.com/NikiVence/devops-kr-template/pull/1
+Merged: true (squash)

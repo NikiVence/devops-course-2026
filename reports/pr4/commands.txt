@@ -1,0 +1,247 @@
+$ git status --porcelain
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git config user.name Aliev Nikita
+
+$ git config user.email aliev.n.d@edu.mirea.ru
+
+$ git remote rename origin upstream
+
+$ git switch -c main upstream/master
+branch 'main' set up to track 'upstream/master'.
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Switched to a new branch 'main'
+
+$ git remote add origin https://github.com/NikiVence/devops-kr-template.git
+
+$ git remote add mirror https://github.com/NikiVence/devops-kr-mirror.git
+
+$ git remote set-url --add --push origin https://github.com/NikiVence/devops-kr-template.git
+
+$ git remote set-url --add --push origin https://github.com/NikiVence/devops-kr-mirror.git
+
+$ git remote -v
+mirror	https://github.com/NikiVence/devops-kr-mirror.git (fetch)
+mirror	https://github.com/NikiVence/devops-kr-mirror.git (push)
+origin	https://github.com/NikiVence/devops-kr-template.git (fetch)
+origin	https://github.com/NikiVence/devops-kr-template.git (push)
+origin	https://github.com/NikiVence/devops-kr-mirror.git (push)
+upstream	https://gitverse.ru/dgimatdinov/devops-kr-template (fetch)
+upstream	https://gitverse.ru/dgimatdinov/devops-kr-template (push)
+
+$ git log --oneline --all --graph
+* 1341ed3 fix: fix validator
+| * 16f413c feat add validate_snils
+|/  
+* 5ed82d1 test: add tests
+* 501ef91 Create: new_file
+* b4d4305 Create: validator.py
+
+$ git rev-parse main
+1341ed3bee42bc43a2f5bd0958b7da1aa8375cc3
+
+$ git rev-parse upstream/feature/instructor-change
+16f413cd6e1ef4ec9619a4f4301702d2b8741414
+
+$ git tag evidence/kr-original 1341ed3bee42bc43a2f5bd0958b7da1aa8375cc3
+
+$ git switch -c feature/add-phone-validation
+Switched to a new branch 'feature/add-phone-validation'
+
+$ git add -- validator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'validator.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m feat: add phone validation function
+[feature/add-phone-validation ce04a9b] feat: add phone validation function
+ 1 file changed, 17 insertions(+), 7 deletions(-)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+ce04a9bd8cb2436f0b9237fb1fafe4e5fb203f86
+
+$ git mv test/test_validator.py tests/test_validator.py
+
+$ git add -- tests test pyproject.toml requirements-dev.txt .gitignore
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'tests/test_validator.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pyproject.toml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'requirements-dev.txt', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m test: add phone validation tests
+[feature/add-phone-validation ee59670] test: add phone validation tests
+ 5 files changed, 29 insertions(+), 4 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 pyproject.toml
+ create mode 100644 requirements-dev.txt
+ delete mode 100644 test/test_validator.py
+ create mode 100644 tests/test_validator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+ee596703ab804b1c92a30da8300a6b2f9b335b6a
+
+$ git add -- validator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'validator.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m wip: start INN validation
+[feature/add-phone-validation f865b40] wip: start INN validation
+ 1 file changed, 5 insertions(+)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+f865b40b0d09d04552886a9a949dbd1ebdd43216
+
+$ git add -- validator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'validator.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m fix: typo in phone validation docstring
+[feature/add-phone-validation 32e7e18] fix: typo in phone validation docstring
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+32e7e184ae330bd5bb673237c0622db246c63186
+
+$ git log --oneline -4
+32e7e18 fix: typo in phone validation docstring
+f865b40 wip: start INN validation
+ee59670 test: add phone validation tests
+ce04a9b feat: add phone validation function
+
+$ git tag evidence/kr-dirty
+
+$ git rebase -i HEAD~4
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (2/4)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (3/4)
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+Rebasing (4/4)
+Successfully rebased and updated refs/heads/feature/add-phone-validation.
+
+$ git rev-list --count 1341ed3bee42bc43a2f5bd0958b7da1aa8375cc3..HEAD
+1
+
+$ git tag evidence/kr-clean
+
+$ git log --oneline -3
+10189ed feat: add phone validation function
+1341ed3 fix: fix validator
+5ed82d1 test: add tests
+
+$ git show upstream/feature/instructor-change:validator.py
+# validator.py
+def validate_email(email: str) -> bool:
+    """Валидация email-адреса."""
+    import re
+    pattern = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+    return bool(re.match(pattern, email))
+
+
+def validate_snils(snils: str) -> bool:
+    """Валидация СНИЛС (Страховой номер индивидуального лицевого счёта).
+    
+    СНИЛС состоит из 11 цифр: 9 цифр номера + 2 цифры контрольного числа.
+    """
+    import re
+    
+    # Удаляем пробелы и дефисы для удобства ввода
+    cleaned = snils.replace('-', '').replace(' ', '')
+    
+    # Проверка формата: ровно 11 цифр
+    if not re.match(r'^\d{11}$', cleaned):
+        return False
+    
+    # Первые 9 цифр — номер, последние 2 — контрольное число
+    numbers = [int(digit) for digit in cleaned[:9]]
+    check_sum = int(cleaned[9:11])
+    
+    # Вычисляем контрольную сумму:
+    # каждая цифра умножается на позицию (от 9 до 1)
+    calculated = sum((9 - i) * numbers[i] for i in range(9))
+    
+    # Применяем правила расчёта контрольного числа
+    if calculated < 100:
+        expected = calculated
+    elif calculated % 101 == 100:
+        expected = 0
+    else:
+        expected = calculated % 101
+    
+    return expected == check_sum
+$ git merge upstream/feature/instructor-change
+CONFLICT (modify/delete): test/test_validator.py deleted in HEAD and modified in upstream/feature/instructor-change.  Version upstream/feature/instructor-change of test/test_validator.py left in tree.
+Auto-merging validator.py
+CONFLICT (content): Merge conflict in validator.py
+Automatic merge failed; fix conflicts and then commit the result.
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git add -- validator.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'validator.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m merge: resolve conflict with instructor branch
+U	test/test_validator.py
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+$ git show upstream/feature/instructor-change:test/test_validator.py
+# tests/test_validator.py
+def test_validate_email():
+    assert validate_email("test@example.com") == True
+    assert validate_email("invalid") == False
+    
+
+def test_validate_snils():
+    # Валидные СНИЛС (рассчитаны по алгоритму)
+    assert validate_snils("11223344595") == True
+    assert validate_snils("001-001-999 32") == True  # с форматированием
+    
+    # Невалидные: неверный формат
+    assert validate_snils("123") == False              # слишком короткий
+    assert validate_snils("123456789012") == False     # слишком длинный
+    assert validate_snils("abcdefghijk") == False      # не цифры
+    
+    # Невалидные: неверная контрольная сумма
+    assert validate_snils("11223344500") == False
+$ git rm test/test_validator.py
+rm 'test/test_validator.py'
+
+$ git add -- validator.py tests/test_instructor_snils.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'tests/test_instructor_snils.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m merge: resolve conflict with instructor branch
+[feature/add-phone-validation 320e5d7] merge: resolve conflict with instructor branch
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+320e5d773e4077754b5848133e55bd8715140e3a
+
+$ git add -- tests/test_snils.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+warning: in the working copy of 'tests/test_snils.py', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m test: verify preserved instructor SNILS validation
+[feature/add-phone-validation 23d5029] test: verify preserved instructor SNILS validation
+ 1 file changed, 9 insertions(+)
+ create mode 100644 tests/test_snils.py
+warning: unable to access 'C:\Users\Администратор/.config/git/ignore': Permission denied
+
+$ git rev-parse HEAD
+23d502935d3a24ca34e6ad500927e35bd73a815e
+

@@ -1,0 +1,31 @@
+<!doctype html><html lang="ru"><meta charset="utf-8">
+<style>body{margin:0;background:#fff;font-family:Arial;color:#16283b}
+header{padding:18px 24px;background:#e7edf4;font-size:22px;font-weight:bold}
+small{display:block;padding:10px 24px;font-size:16px;color:#455468}
+pre{font:22px/1.3 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;
+padding:12px 24px;margin:0}</style><header>Результаты pytest</header><small>Фактический журнал · pr4/06_tests.txt</small><pre>============================= test session starts =============================
+platform win32 -- Python 3.12.5, pytest-9.1.1, pluggy-1.6.0 -- D:\consult_managing\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\consult_managing\devops-kr-template
+configfile: pyproject.toml
+testpaths: tests
+collecting ... collected 15 items
+
+tests/test_instructor_snils.py::test_validate_snils PASSED               [  6%]
+tests/test_snils.py::test_snils_checksum_and_format PASSED               [ 13%]
+tests/test_validator.py::test_validate_email PASSED                      [ 20%]
+tests/test_validator.py::test_validate_phone_accepts_russian_numbers[+79991234567] PASSED [ 26%]
+tests/test_validator.py::test_validate_phone_accepts_russian_numbers[79991234567] PASSED [ 33%]
+tests/test_validator.py::test_validate_phone_accepts_russian_numbers[+7 999 123-45-67] PASSED [ 40%]
+tests/test_validator.py::test_validate_phone_rejects_invalid_numbers[89991234567] PASSED [ 46%]
+tests/test_validator.py::test_validate_phone_rejects_invalid_numbers[+7999123] PASSED [ 53%]
+tests/test_validator.py::test_validate_phone_rejects_invalid_numbers[] PASSED [ 60%]
+tests/test_validator.py::test_validate_phone_rejects_invalid_numbers[+799912345678] PASSED [ 66%]
+tests/test_validator.py::test_validate_phone_rejects_invalid_numbers[+79991234567\n] PASSED [ 73%]
+tests/test_validator.py::test_validate_phone_rejects_invalid_numbers[+7(999)1234567] PASSED [ 80%]
+tests/test_validator.py::test_validate_phone_rejects_invalid_numbers[+7999123456x] PASSED [ 86%]
+tests/test_validator.py::test_validate_phone_rejects_invalid_numbers[+7\uff19\uff19\uff19\uff11\uff12\uff13\uff14\uff15\uff16\uff17] PASSED [ 93%]
+tests/test_validator.py::test_validate_phone_rejects_invalid_numbers[++79991234567] PASSED [100%]
+
+============================= 15 passed in 0.15s ==============================
+</pre></html>

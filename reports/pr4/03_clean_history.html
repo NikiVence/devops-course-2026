@@ -1,0 +1,27 @@
+<!doctype html><html lang="ru"><meta charset="utf-8">
+<style>body{margin:0;background:#fff;font-family:Arial;color:#16283b}
+header{padding:18px 24px;background:#e7edf4;font-size:22px;font-weight:bold}
+small{display:block;padding:10px 24px;font-size:16px;color:#455468}
+pre{font:22px/1.3 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;
+padding:12px 24px;margin:0}</style><header>Чистая история и код</header><small>Фактический журнал · pr4/03_clean_history.txt</small><pre>10189ed feat: add phone validation function
+1341ed3 fix: fix validator
+5ed82d1 test: add tests
+
+def validate_phone(phone: str) -&gt; bool:
+    &quot;&quot;&quot;Валидация российского номера телефона.&quot;&quot;&quot;
+    import re
+
+    cleaned = phone.replace(&#x27;-&#x27;, &#x27;&#x27;).replace(&#x27; &#x27;, &#x27;&#x27;)
+    return bool(re.fullmatch(r&#x27;\+?7[0-9]{10}&#x27;, cleaned))
+
+
+# validator.py
+def validate_email(email: str) -&gt; bool:
+    &quot;&quot;&quot;Валидация email-адреса.&quot;&quot;&quot;
+    import re
+    pattern = r&#x27;^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$&#x27;
+    return bool(re.match(pattern, email))
+
+
+__all__ = [&quot;validate_email&quot;, &quot;validate_phone&quot;]
+</pre></html>

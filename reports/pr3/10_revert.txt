@@ -1,0 +1,13 @@
+f9fa428 Revert "feat: add new feature (accidentally broken)"
+9d7982e feat: add new feature (accidentally broken)
+04a8bef fix: critical bug in calculator
+
+# Calculator app
+def add(a, b):
+    return a + b
+# TODO: add more functions
+
+def subtract(a, b):
+    return a - b  # fixed
+
+IMPORTANT_FIX = True

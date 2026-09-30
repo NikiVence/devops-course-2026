@@ -1,0 +1,8 @@
+$ git commit -m "bad message"
+ERROR: expected Conventional Commits: <type>: <description>
+
+$ git commit -m "chore: test git hook"
+[main a6b1d12] chore: test git hook
+ 2 files changed, 7 insertions(+)
+ create mode 100755 .githooks/commit-msg
+ create mode 100644 test_hook.txt

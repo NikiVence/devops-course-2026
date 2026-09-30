@@ -1,0 +1,4 @@
+$ git log --oneline -3
+bd547f8 oops notes
+b85053f wip
+47de461 start notes

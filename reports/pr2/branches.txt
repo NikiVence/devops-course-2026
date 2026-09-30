@@ -1,0 +1,18 @@
+$ git branch -a
+  backup/before-pr3-completion-20260930
+  feature/calculator
+  feature/hobby-project
+  hotfix/urgent-fix
+* main
+  practice/rebase-playground
+  prep/kr-practice
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/feature/hobby-project
+  remotes/origin/main
+  remotes/origin/practice/rebase-playground
+
+$ git log --graph --oneline origin/main -5
+* 7d43138 feat: add hobby project description (#1)
+* 5e315b8 Add goals.md with my 3 goals
+* 3afcc09 Add about_me.md with student info
+* d431d8a Initial commit

@@ -1,0 +1,8 @@
+$ git remote -v
+mirror	https://github.com/NikiVence/devops-kr-mirror.git (fetch)
+mirror	https://github.com/NikiVence/devops-kr-mirror.git (push)
+origin	https://github.com/NikiVence/devops-kr-template.git (fetch)
+origin	https://github.com/NikiVence/devops-kr-template.git (push)
+origin	https://github.com/NikiVence/devops-kr-mirror.git (push)
+upstream	https://gitverse.ru/dgimatdinov/devops-kr-template (fetch)
+upstream	https://gitverse.ru/dgimatdinov/devops-kr-template (push)
