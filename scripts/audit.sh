@@ -51,6 +51,33 @@ awk -F: '$3>=1000 && $3<65534 {
     printf "  %s (uid=%s)\n", $1, $3
 }' /etc/passwd
 
+
+echo "[4] Web server"
+check "Nginx active" "active" "$(systemctl is-active nginx)"
+
+NGINX_OK=no
+if sudo nginx -t; then NGINX_OK=yes; fi
+check "Nginx configuration valid" "yes" "$NGINX_OK"
+
+CERT_SECONDS="${CERT_MIN_SECONDS:-2592000}"
+CERT_OK=no
+if openssl x509 -in /etc/ssl/certs/devops.crt \
+    -noout -checkend "$CERT_SECONDS"; then
+    CERT_OK=yes
+fi
+check "Certificate validity threshold" "yes" "$CERT_OK"
+
+PERMISSIONS_OK=yes
+if WRITABLE=$(find /var/www/devops-site -perm -o+w); then
+    [[ -z "$WRITABLE" ]] || PERMISSIONS_OK=no
+else
+    PERMISSIONS_OK=no
+fi
+KEY_MODE=$(sudo stat -c '%a' /etc/ssl/private/devops.key) ||
+    PERMISSIONS_OK=no
+[[ "$KEY_MODE" == "600" ]] || PERMISSIONS_OK=no
+check "Site and private key permissions" "yes" "$PERMISSIONS_OK"
+
 echo "Passed: $PASS; failed: $FAIL"
 if [[ "$FAIL" -eq 0 ]]; then
     exit 0
